@@ -1,31 +1,34 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { FileText, Image, Settings, Download, Star } from "lucide-react";
+import { FileText, Shield, Printer, Download, Star } from "lucide-react";
 
 const extensions = [
   {
     icon: FileText,
-    name: "PDF Master",
-    description: "Convert, view, and edit PDF files with ease. Merge, split, and compress PDFs directly in your browser.",
+    name: "Easy PDF Viewer",
+    description: "Bring simplicity to viewing and converting PDFs right from your browser! Enhanced browsing experience with easy PDF management.",
+    rating: 4.5,
+    downloads: "3K+",
+    color: "bg-brand-red",
+    chromeStoreUrl: "https://chromewebstore.google.com/detail/easy-pdf-viewer/jgdddeonphekfhicmnpffkfpboalmcjd"
+  },
+  {
+    icon: Shield,
+    name: "Easy Login",
+    description: "Tired of encountering fake or dangerous login pages? Instantly redirects you to verified and authentic login pages. Advanced security checks protect your data.",
     rating: 4.8,
-    downloads: "50K+",
-    color: "bg-brand-red"
+    downloads: "2K+", 
+    color: "bg-brand-blue",
+    chromeStoreUrl: "https://chromewebstore.google.com/detail/easy-login/cpmjnpalighpdecgankobogpcmbceaig"
   },
   {
-    icon: Image,
-    name: "Image Tools Pro",
-    description: "Resize, compress, and convert images instantly. Support for all major formats including PNG, JPG, WebP.",
-    rating: 4.9,
-    downloads: "35K+", 
-    color: "bg-brand-blue"
-  },
-  {
-    icon: Settings,
-    name: "Productivity Suite",
-    description: "All-in-one toolkit for enhanced productivity. Task management, note-taking, and workflow automation.",
-    rating: 4.7,
-    downloads: "28K+",
-    color: "bg-brand-yellow"
+    icon: Printer,
+    name: "Quick Print",
+    description: "Clean, clutter-free printing in one click! Automatically removes ads, navigation menus, and sidebars for optimized paper printing.",
+    rating: 4.6,
+    downloads: "3K+",
+    color: "bg-brand-yellow",
+    chromeStoreUrl: "https://chromewebstore.google.com/detail/quick-print/ebgcanfjipfcdnjgpbagblmgebkpbhoo"
   }
 ];
 
@@ -68,7 +71,11 @@ const Extensions = () => {
                   <CardDescription className="text-muted-foreground mb-6 leading-relaxed">
                     {extension.description}
                   </CardDescription>
-                  <Button variant="outline" className="w-full group-hover:bg-gradient-primary group-hover:text-white group-hover:border-transparent transition-all">
+                  <Button 
+                    variant="outline" 
+                    className="w-full group-hover:bg-gradient-primary group-hover:text-white group-hover:border-transparent transition-all"
+                    onClick={() => window.open(extension.chromeStoreUrl, '_blank')}
+                  >
                     Add to Chrome
                   </Button>
                 </CardContent>
