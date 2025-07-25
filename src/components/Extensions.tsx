@@ -85,7 +85,11 @@ const Extensions = () => {
         </div>
 
         <div className="text-center">
-          <Button variant="hero" size="lg">
+          <Button 
+            variant="hero" 
+            size="lg"
+            onClick={() => window.location.href = '/all-apps'}
+          >
             View All Extensions
           </Button>
         </div>

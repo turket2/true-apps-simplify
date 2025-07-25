@@ -21,7 +21,7 @@ const AllApps = () => {
         "Add annotations and comments",
         "Password protection"
       ],
-      chromeStoreUrl: "https://chrome.google.com/webstore"
+      chromeStoreUrl: "https://chromewebstore.google.com/detail/easy-pdf-viewer/jgdddeonphekfhicmnpffkfpboalmcjd"
     },
     {
       icon: Shield,
@@ -37,7 +37,7 @@ const AllApps = () => {
         "Two-factor authentication",
         "Cross-device sync"
       ],
-      chromeStoreUrl: "https://chrome.google.com/webstore"
+      chromeStoreUrl: "https://chromewebstore.google.com/detail/easy-login/cpmjnpalighpdecgankobogpcmbceaig"
     },
     {
       icon: Printer,
@@ -53,7 +53,7 @@ const AllApps = () => {
         "Layout optimization",
         "Save as PDF"
       ],
-      chromeStoreUrl: "https://chrome.google.com/webstore"
+      chromeStoreUrl: "https://chromewebstore.google.com/detail/quick-print/ebgcanfjipfcdnjgpbagblmgebkpbhoo"
     }
   ];
 

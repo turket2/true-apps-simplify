@@ -20,12 +20,30 @@ const Header = () => {
             <a href="/" className="text-muted-foreground hover:text-foreground transition-colors">
               Home
             </a>
-            <a href="#extensions" className="text-muted-foreground hover:text-foreground transition-colors">
+            <button 
+              onClick={() => {
+                if (window.location.pathname === '/') {
+                  document.getElementById('extensions')?.scrollIntoView({ behavior: 'smooth' });
+                } else {
+                  window.location.href = '/#extensions';
+                }
+              }}
+              className="text-muted-foreground hover:text-foreground transition-colors"
+            >
               Extensions
-            </a>
-            <a href="#features" className="text-muted-foreground hover:text-foreground transition-colors">
+            </button>
+            <button 
+              onClick={() => {
+                if (window.location.pathname === '/') {
+                  document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' });
+                } else {
+                  window.location.href = '/#features';
+                }
+              }}
+              className="text-muted-foreground hover:text-foreground transition-colors"
+            >
               Features
-            </a>
+            </button>
             <a href="/about" className="text-muted-foreground hover:text-foreground transition-colors">
               About
             </a>
