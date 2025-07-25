@@ -25,10 +25,7 @@ const Header = () => {
                 if (window.location.pathname === '/') {
                   document.getElementById('extensions')?.scrollIntoView({ behavior: 'smooth' });
                 } else {
-                  window.location.href = '/';
-                  setTimeout(() => {
-                    document.getElementById('extensions')?.scrollIntoView({ behavior: 'smooth' });
-                  }, 100);
+                  window.location.href = '/#extensions';
                 }
               }}
               className="text-muted-foreground hover:text-foreground transition-colors"
@@ -40,10 +37,7 @@ const Header = () => {
                 if (window.location.pathname === '/') {
                   document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' });
                 } else {
-                  window.location.href = '/';
-                  setTimeout(() => {
-                    document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' });
-                  }, 100);
+                  window.location.href = '/#features';
                 }
               }}
               className="text-muted-foreground hover:text-foreground transition-colors"
