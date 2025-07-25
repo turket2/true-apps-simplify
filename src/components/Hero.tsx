@@ -87,12 +87,12 @@ const Hero = () => {
                 </div>
                 
                 {/* Download icon - bottom right */}
-                <div className="absolute bottom-8 right-8 w-12 h-12 bg-brand-blue rounded-xl shadow-md flex items-center justify-center transform rotate-30 hover:rotate-0 transition-transform duration-300 cursor-pointer">
+                <div className="absolute bottom-12 right-4 w-12 h-12 bg-brand-blue rounded-xl shadow-md flex items-center justify-center transform rotate-30 hover:rotate-0 transition-transform duration-300 cursor-pointer z-10">
                   <Download className="w-5 h-5 text-white" />
                 </div>
                 
                 {/* Zap icon - right center */}
-                <div className="absolute top-1/2 -translate-y-1/2 right-2 w-10 h-10 bg-brand-red rounded-lg shadow-md flex items-center justify-center transform -rotate-30 hover:rotate-0 transition-transform duration-300 cursor-pointer">
+                <div className="absolute top-1/2 -translate-y-1/2 right-6 w-10 h-10 bg-brand-red rounded-lg shadow-md flex items-center justify-center transform -rotate-30 hover:rotate-0 transition-transform duration-300 cursor-pointer z-10">
                   <Zap className="w-4 h-4 text-white" />
                 </div>
               </div>
