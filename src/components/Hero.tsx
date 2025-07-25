@@ -65,34 +65,35 @@ const Hero = () => {
                 <div className="absolute inset-4 bg-gradient-accent rounded-full opacity-30"></div>
                 <div className="absolute inset-8 bg-background rounded-full shadow-elegant"></div>
                 
-                {/* Floating extension icons */}
-                {/* Easy PDF Viewer */}
-                <div className="absolute top-12 right-16 w-16 h-16 bg-brand-red rounded-xl shadow-lg flex items-center justify-center transform rotate-12 hover:rotate-0 transition-transform">
+                {/* Floating extension icons - better positioned around the circle */}
+                {/* Easy PDF Viewer - top right */}
+                <div className="absolute top-8 right-12 w-16 h-16 bg-brand-red rounded-xl shadow-lg flex items-center justify-center transform rotate-12 hover:rotate-0 transition-transform duration-300 cursor-pointer">
                   <FileText className="w-7 h-7 text-white" />
                 </div>
                 
-                {/* Easy Login */}
-                <div className="absolute bottom-16 left-12 w-14 h-14 bg-brand-blue rounded-xl shadow-lg flex items-center justify-center transform -rotate-12 hover:rotate-0 transition-transform">
+                {/* Easy Login - left center */}
+                <div className="absolute top-1/2 -translate-y-1/2 left-4 w-14 h-14 bg-brand-blue rounded-xl shadow-lg flex items-center justify-center transform -rotate-12 hover:rotate-0 transition-transform duration-300 cursor-pointer">
                   <Shield className="w-6 h-6 text-white" />
                 </div>
                 
-                {/* Quick Print */}
-                <div className="absolute top-1/3 right-4 w-12 h-12 bg-brand-yellow rounded-xl shadow-lg flex items-center justify-center transform rotate-45 hover:rotate-0 transition-transform">
+                {/* Quick Print - top left */}
+                <div className="absolute top-12 left-8 w-12 h-12 bg-brand-yellow rounded-xl shadow-lg flex items-center justify-center transform rotate-45 hover:rotate-0 transition-transform duration-300 cursor-pointer">
                   <Printer className="w-5 h-5 text-white" />
                 </div>
                 
-                {/* Chrome Extensions indicator */}
-                <div className="absolute bottom-1/3 left-8 w-10 h-10 bg-accent rounded-lg shadow-lg flex items-center justify-center transform -rotate-45 hover:rotate-0 transition-transform">
+                {/* Chrome Extensions indicator - bottom left */}
+                <div className="absolute bottom-12 left-12 w-10 h-10 bg-accent rounded-lg shadow-lg flex items-center justify-center transform -rotate-45 hover:rotate-0 transition-transform duration-300 cursor-pointer">
                   <Chrome className="w-4 h-4 text-primary" />
                 </div>
                 
-                {/* Additional decorative icons */}
-                <div className="absolute top-1/4 left-4 w-8 h-8 bg-brand-red/80 rounded-lg shadow-md flex items-center justify-center transform rotate-30 hover:rotate-0 transition-transform">
-                  <Zap className="w-3 h-3 text-white" />
+                {/* Download icon - bottom right */}
+                <div className="absolute bottom-8 right-8 w-12 h-12 bg-brand-blue/80 rounded-xl shadow-md flex items-center justify-center transform rotate-30 hover:rotate-0 transition-transform duration-300 cursor-pointer">
+                  <Download className="w-5 h-5 text-white" />
                 </div>
                 
-                <div className="absolute bottom-1/4 right-8 w-10 h-10 bg-brand-blue/70 rounded-xl shadow-md flex items-center justify-center transform -rotate-30 hover:rotate-0 transition-transform">
-                  <Download className="w-4 h-4 text-white" />
+                {/* Zap icon - right center */}
+                <div className="absolute top-1/2 -translate-y-1/2 right-2 w-10 h-10 bg-brand-red/70 rounded-lg shadow-md flex items-center justify-center transform -rotate-30 hover:rotate-0 transition-transform duration-300 cursor-pointer">
+                  <Zap className="w-4 h-4 text-white" />
                 </div>
               </div>
             </div>
