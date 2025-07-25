@@ -94,16 +94,9 @@ const AllApps = () => {
                 <Card key={index} className="group relative overflow-hidden transition-all duration-300 hover:shadow-elegant hover:-translate-y-2">
                   <div className="p-8">
                     {/* Icon Header */}
-                    <div className="flex items-center justify-between mb-6">
+                    <div className="flex items-center justify-center mb-6">
                       <div className={`w-16 h-16 ${extension.color} rounded-xl flex items-center justify-center shadow-lg`}>
                         <IconComponent className="w-8 h-8 text-white" />
-                      </div>
-                      <div className="text-right">
-                        <div className="flex items-center gap-1 text-brand-yellow mb-1">
-                          <Star className="w-4 h-4 fill-current" />
-                          <span className="font-semibold">{extension.rating}</span>
-                        </div>
-                        <p className="text-sm text-muted-foreground">{extension.downloads} downloads</p>
                       </div>
                     </div>
 

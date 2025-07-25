@@ -18,17 +18,6 @@ const Footer = () => {
             <p className="text-primary-foreground/80 mb-4">
               Simplifying your digital life with powerful Chrome extensions that enhance productivity and streamline everyday tasks.
             </p>
-            <div className="flex items-center gap-4">
-              <a href="#" className="text-primary-foreground/60 hover:text-primary-foreground transition-colors">
-                <Twitter className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-primary-foreground/60 hover:text-primary-foreground transition-colors">
-                <Github className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-primary-foreground/60 hover:text-primary-foreground transition-colors">
-                <Mail className="w-5 h-5" />
-              </a>
-            </div>
           </div>
 
           {/* Extensions */}

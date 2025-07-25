@@ -56,16 +56,6 @@ const Extensions = () => {
                     <IconComponent className="w-8 h-8 text-white" />
                   </div>
                   <CardTitle className="text-xl font-semibold">{extension.name}</CardTitle>
-                  <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                    <div className="flex items-center gap-1">
-                      <Star className="w-4 h-4 fill-brand-yellow text-brand-yellow" />
-                      <span>{extension.rating}</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <Download className="w-4 h-4" />
-                      <span>{extension.downloads}</span>
-                    </div>
-                  </div>
                 </CardHeader>
                 <CardContent>
                   <CardDescription className="text-muted-foreground mb-6 leading-relaxed">
