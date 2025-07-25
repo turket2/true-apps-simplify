@@ -6,11 +6,12 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Bug, Mail, AlertTriangle } from "lucide-react";
+import { Bug, Mail, AlertTriangle, CheckCircle } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 
 const BugReports = () => {
+  const [isSubmitted, setIsSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -36,22 +37,24 @@ const BugReports = () => {
       return;
     }
 
-    // Simulate form submission
-    toast({
-      title: "Bug Report Submitted",
-      description: "Thank you for your report. We'll investigate this issue promptly.",
-    });
+    const subject = `Bug Report: ${formData.subject}`;
+    const body = `Name: ${formData.name}
+Email: ${formData.email}
+Extension: ${formData.extension}
+Severity: ${formData.severity}
+
+Bug Summary: ${formData.subject}
+
+Description:
+${formData.description}
+
+Steps to Reproduce:
+${formData.steps}`;
     
-    // Reset form
-    setFormData({
-      name: "",
-      email: "",
-      extension: "",
-      severity: "",
-      subject: "",
-      description: "",
-      steps: ""
-    });
+    const mailtoLink = `mailto:support@trueapps.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailtoLink;
+    
+    setIsSubmitted(true);
   };
 
   const handleInputChange = (field: string, value: string) => {
@@ -60,6 +63,33 @@ const BugReports = () => {
       [field]: value
     }));
   };
+
+  if (isSubmitted) {
+    return (
+      <div className="min-h-screen bg-background">
+        <Header />
+        <section className="py-20 bg-gradient-subtle">
+          <div className="container mx-auto px-6 text-center">
+            <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-6" />
+            <h1 className="text-4xl font-bold text-foreground mb-4">Thank You!</h1>
+            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+              Thank you for your feedback. We will get back to you when we are able to.
+            </p>
+            <Button 
+              variant="hero" 
+              onClick={() => {
+                setIsSubmitted(false);
+                setFormData({ name: "", email: "", extension: "", severity: "", subject: "", description: "", steps: "" });
+              }}
+            >
+              Report Another Bug
+            </Button>
+          </div>
+        </section>
+        <Footer />
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-background">

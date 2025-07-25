@@ -155,7 +155,7 @@ const AllApps = () => {
               <Button 
                 variant="hero" 
                 size="lg"
-                onClick={() => window.open("https://chrome.google.com/webstore", '_blank')}
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
               >
                 <Download className="w-5 h-5 mr-2" />
                 Get All Extensions

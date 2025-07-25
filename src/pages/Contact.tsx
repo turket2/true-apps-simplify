@@ -4,11 +4,64 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Mail, Users, FileText } from "lucide-react";
+import { Mail, Users, FileText, CheckCircle } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { useState } from "react";
 
 const Contact = () => {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    helpType: "",
+    message: ""
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    const subject = `Contact Form: ${formData.helpType || 'General Inquiry'}`;
+    const body = `Name: ${formData.firstName} ${formData.lastName}
+Email: ${formData.email}
+Help Type: ${formData.helpType}
+
+Message:
+${formData.message}`;
+    
+    const mailtoLink = `mailto:support@trueapps.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailtoLink;
+    
+    setIsSubmitted(true);
+  };
+
+  if (isSubmitted) {
+    return (
+      <div className="min-h-screen bg-background">
+        <Header />
+        <section className="py-20 bg-gradient-subtle">
+          <div className="container mx-auto px-6 text-center">
+            <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-6" />
+            <h1 className="text-4xl font-bold text-foreground mb-4">Thank You!</h1>
+            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+              Thank you for your feedback. We will get back to you when we are able to.
+            </p>
+            <Button 
+              variant="hero" 
+              onClick={() => {
+                setIsSubmitted(false);
+                setFormData({ firstName: "", lastName: "", email: "", helpType: "", message: "" });
+              }}
+            >
+              Send Another Message
+            </Button>
+          </div>
+        </section>
+        <Footer />
+      </div>
+    );
+  }
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -48,50 +101,74 @@ const Contact = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-6">
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="space-y-2">
-                    <Label htmlFor="firstName">First Name</Label>
-                    <Input id="firstName" placeholder="Enter your first name" />
+                <form onSubmit={handleSubmit}>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div className="space-y-2">
+                      <Label htmlFor="firstName">First Name</Label>
+                      <Input 
+                        id="firstName" 
+                        placeholder="Enter your first name" 
+                        value={formData.firstName}
+                        onChange={(e) => setFormData(prev => ({ ...prev, firstName: e.target.value }))}
+                        required
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="lastName">Last Name</Label>
+                      <Input 
+                        id="lastName" 
+                        placeholder="Enter your last name" 
+                        value={formData.lastName}
+                        onChange={(e) => setFormData(prev => ({ ...prev, lastName: e.target.value }))}
+                        required
+                      />
+                    </div>
                   </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="lastName">Last Name</Label>
-                    <Input id="lastName" placeholder="Enter your last name" />
+                  
+                  <div className="space-y-2 mb-6">
+                    <Label htmlFor="email">Email</Label>
+                    <Input 
+                      id="email" 
+                      type="email" 
+                      placeholder="Enter your email address" 
+                      value={formData.email}
+                      onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
+                      required
+                    />
                   </div>
-                </div>
-                
-                <div className="space-y-2">
-                  <Label htmlFor="email">Email</Label>
-                  <Input id="email" type="email" placeholder="Enter your email address" />
-                </div>
-                
-                <div className="space-y-2">
-                  <Label htmlFor="helpType">How can we help?</Label>
-                  <Select>
-                    <SelectTrigger>
-                      <SelectValue placeholder="Select a topic" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="support">Technical Support</SelectItem>
-                      <SelectItem value="bug">Bug Report</SelectItem>
-                      <SelectItem value="feature">Feature Request</SelectItem>
-                      <SelectItem value="billing">Billing Question</SelectItem>
-                      <SelectItem value="other">Other</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-                
-                <div className="space-y-2">
-                  <Label htmlFor="message">Tell us more</Label>
-                  <Textarea 
-                    id="message" 
-                    placeholder="Please describe your question or issue in detail..."
-                    className="min-h-32"
-                  />
-                </div>
-                
-                <Button variant="hero" className="w-full" size="lg">
-                  Submit Request
-                </Button>
+                  
+                  <div className="space-y-2 mb-6">
+                    <Label htmlFor="helpType">How can we help?</Label>
+                    <Select value={formData.helpType} onValueChange={(value) => setFormData(prev => ({ ...prev, helpType: value }))}>
+                      <SelectTrigger>
+                        <SelectValue placeholder="Select a topic" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="support">Technical Support</SelectItem>
+                        <SelectItem value="bug">Bug Report</SelectItem>
+                        <SelectItem value="feature">Feature Request</SelectItem>
+                        <SelectItem value="billing">Billing Question</SelectItem>
+                        <SelectItem value="other">Other</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
+                  
+                  <div className="space-y-2 mb-6">
+                    <Label htmlFor="message">Tell us more</Label>
+                    <Textarea 
+                      id="message" 
+                      placeholder="Please describe your question or issue in detail..."
+                      className="min-h-32"
+                      value={formData.message}
+                      onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))}
+                      required
+                    />
+                  </div>
+                  
+                  <Button type="submit" variant="hero" className="w-full" size="lg">
+                    Submit Request
+                  </Button>
+                </form>
               </CardContent>
             </Card>
 
@@ -114,9 +191,6 @@ const Contact = () => {
                       <a href="mailto:press@trueapps.com">
                         Contact Press Team
                       </a>
-                    </Button>
-                    <Button variant="ghost" className="w-full">
-                      View Press Resources
                     </Button>
                   </div>
                 </CardContent>
