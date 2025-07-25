@@ -197,14 +197,14 @@ const HelpCenter = () => {
                   <Book className="w-5 h-5 text-blue-500" />
                   Easy PDF Viewer
                 </CardTitle>
-                <CardDescription>Help with PDF viewing and management</CardDescription>
+                <CardDescription>Help with PDF viewing and conversion</CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li>• Opening PDF files</li>
-                  <li>• Zoom and navigation</li>
-                  <li>• Print settings</li>
-                  <li>• Keyboard shortcuts</li>
+                  <li>• Effortless PDF viewing</li>
+                  <li>• Seamless conversion</li>
+                  <li>• High-quality outputs</li>
+                  <li>• Format support</li>
                 </ul>
               </CardContent>
             </Card>
@@ -215,14 +215,14 @@ const HelpCenter = () => {
                   <Settings className="w-5 h-5 text-green-500" />
                   Easy Login
                 </CardTitle>
-                <CardDescription>Help with login automation</CardDescription>
+                <CardDescription>Help with secure login access</CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li>• Setting up auto-login</li>
-                  <li>• Security settings</li>
-                  <li>• Managing credentials</li>
-                  <li>• Troubleshooting</li>
+                  <li>• Verified login access</li>
+                  <li>• Security checks</li>
+                  <li>• Seamless integration</li>
+                  <li>• User interface help</li>
                 </ul>
               </CardContent>
             </Card>
@@ -233,14 +233,14 @@ const HelpCenter = () => {
                   <Chrome className="w-5 h-5 text-purple-500" />
                   Quick Print
                 </CardTitle>
-                <CardDescription>Help with printing features</CardDescription>
+                <CardDescription>Help with clutter-free printing</CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li>• Print setup</li>
-                  <li>• Page formatting</li>
-                  <li>• Printer selection</li>
-                  <li>• Print preview</li>
+                  <li>• Clutter-free printing</li>
+                  <li>• One-click operation</li>
+                  <li>• Ink & paper saving</li>
+                  <li>• Website compatibility</li>
                 </ul>
               </CardContent>
             </Card>

@@ -42,16 +42,16 @@ const AllApps = () => {
     {
       icon: Printer,
       name: "Quick Print",
-      description: "Advanced printing controls for web pages. Remove ads, select specific content, and optimize layouts for perfect printing results.",
+      description: "Tired of wasting paper and ink on messy web pages? Quick Print simplifies printing by automatically removing ads and clutter for clean, optimized layouts.",
       rating: 4.7,
       downloads: "30,000+",
       color: "bg-brand-yellow",
       features: [
-        "Ad-free printing",
-        "Content selection",
-        "Print preview",
-        "Layout optimization",
-        "Save as PDF"
+        "Clutter-free printing",
+        "One-click simplicity", 
+        "Ink & paper saver",
+        "Works on most websites",
+        "Clean, readable output"
       ],
       chromeStoreUrl: "https://chromewebstore.google.com/detail/quick-print/ebgcanfjipfcdnjgpbagblmgebkpbhoo"
     }
