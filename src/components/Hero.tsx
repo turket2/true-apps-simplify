@@ -85,6 +85,15 @@ const Hero = () => {
                 <div className="absolute bottom-1/3 left-8 w-10 h-10 bg-accent rounded-lg shadow-lg flex items-center justify-center transform -rotate-45 hover:rotate-0 transition-transform">
                   <Chrome className="w-4 h-4 text-primary" />
                 </div>
+                
+                {/* Additional decorative icons */}
+                <div className="absolute top-1/4 left-4 w-8 h-8 bg-brand-red/80 rounded-lg shadow-md flex items-center justify-center transform rotate-30 hover:rotate-0 transition-transform">
+                  <Zap className="w-3 h-3 text-white" />
+                </div>
+                
+                <div className="absolute bottom-1/4 right-8 w-10 h-10 bg-brand-blue/70 rounded-xl shadow-md flex items-center justify-center transform -rotate-30 hover:rotate-0 transition-transform">
+                  <Download className="w-4 h-4 text-white" />
+                </div>
               </div>
             </div>
           </div>
