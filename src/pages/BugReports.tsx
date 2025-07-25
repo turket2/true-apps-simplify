@@ -232,7 +232,12 @@ const BugReports = () => {
                 <p className="text-muted-foreground text-sm mb-4">
                   For critical issues that prevent you from working, contact us directly.
                 </p>
-                <Button variant="outline" size="sm" className="w-full">
+                <Button 
+                  variant="outline" 
+                  size="sm" 
+                  className="w-full"
+                  onClick={() => window.location.href = '/contact'}
+                >
                   Contact Support
                 </Button>
               </CardContent>
