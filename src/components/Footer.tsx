@@ -46,7 +46,7 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold mb-4">Company</h3>
             <ul className="space-y-2 text-primary-foreground/80">
-              <li><a href="#about" className="hover:text-primary-foreground transition-colors">About Us</a></li>
+              <li><a href="/about" className="hover:text-primary-foreground transition-colors">About Us</a></li>
               <li><a href="#" className="hover:text-primary-foreground transition-colors">Privacy Policy</a></li>
               <li><a href="#" className="hover:text-primary-foreground transition-colors">Terms of Service</a></li>
               <li><a href="/contact" className="hover:text-primary-foreground transition-colors">Contact</a></li>
@@ -57,10 +57,10 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold mb-4">Support</h3>
             <ul className="space-y-2 text-primary-foreground/80">
-              <li><a href="#" className="hover:text-primary-foreground transition-colors">Help Center</a></li>
-              <li><a href="#" className="hover:text-primary-foreground transition-colors">Installation Guide</a></li>
-              <li><a href="#" className="hover:text-primary-foreground transition-colors">Bug Reports</a></li>
-              <li><a href="#" className="hover:text-primary-foreground transition-colors">Feature Requests</a></li>
+              <li><a href="/help-center" className="hover:text-primary-foreground transition-colors">Help Center</a></li>
+              <li><a href="/installation-guide" className="hover:text-primary-foreground transition-colors">Installation Guide</a></li>
+              <li><a href="/bug-reports" className="hover:text-primary-foreground transition-colors">Bug Reports</a></li>
+              <li><a href="/feature-requests" className="hover:text-primary-foreground transition-colors">Feature Requests</a></li>
             </ul>
           </div>
         </div>
