@@ -35,10 +35,10 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold mb-4">Extensions</h3>
             <ul className="space-y-2 text-primary-foreground/80">
-              <li><a href="#" className="hover:text-primary-foreground transition-colors">PDF Master</a></li>
-              <li><a href="#" className="hover:text-primary-foreground transition-colors">Image Tools Pro</a></li>
-              <li><a href="#" className="hover:text-primary-foreground transition-colors">Productivity Suite</a></li>
-              <li><a href="#" className="hover:text-primary-foreground transition-colors">View All</a></li>
+              <li><a href="/#extensions" className="hover:text-primary-foreground transition-colors">Easy PDF Viewer</a></li>
+              <li><a href="/#extensions" className="hover:text-primary-foreground transition-colors">Easy Login</a></li>
+              <li><a href="/#extensions" className="hover:text-primary-foreground transition-colors">Quick Print</a></li>
+              <li><a href="/all-apps" className="hover:text-primary-foreground transition-colors">View All</a></li>
             </ul>
           </div>
 
@@ -49,7 +49,7 @@ const Footer = () => {
               <li><a href="#about" className="hover:text-primary-foreground transition-colors">About Us</a></li>
               <li><a href="#" className="hover:text-primary-foreground transition-colors">Privacy Policy</a></li>
               <li><a href="#" className="hover:text-primary-foreground transition-colors">Terms of Service</a></li>
-              <li><a href="#contact" className="hover:text-primary-foreground transition-colors">Contact</a></li>
+              <li><a href="/contact" className="hover:text-primary-foreground transition-colors">Contact</a></li>
             </ul>
           </div>
 
