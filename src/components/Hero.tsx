@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Chrome, Download, Zap } from "lucide-react";
+import { Chrome, Download, Zap, FileText, Shield, Printer } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -66,20 +66,24 @@ const Hero = () => {
                 <div className="absolute inset-8 bg-background rounded-full shadow-elegant"></div>
                 
                 {/* Floating extension icons */}
+                {/* Easy PDF Viewer */}
                 <div className="absolute top-12 right-16 w-16 h-16 bg-brand-red rounded-xl shadow-lg flex items-center justify-center transform rotate-12 hover:rotate-0 transition-transform">
-                  <span className="text-white font-bold text-xs">PDF</span>
+                  <FileText className="w-7 h-7 text-white" />
                 </div>
                 
+                {/* Easy Login */}
                 <div className="absolute bottom-16 left-12 w-14 h-14 bg-brand-blue rounded-xl shadow-lg flex items-center justify-center transform -rotate-12 hover:rotate-0 transition-transform">
-                  <Chrome className="w-6 h-6 text-white" />
+                  <Shield className="w-6 h-6 text-white" />
                 </div>
                 
+                {/* Quick Print */}
                 <div className="absolute top-1/3 right-4 w-12 h-12 bg-brand-yellow rounded-xl shadow-lg flex items-center justify-center transform rotate-45 hover:rotate-0 transition-transform">
-                  <Zap className="w-5 h-5 text-primary" />
+                  <Printer className="w-5 h-5 text-white" />
                 </div>
                 
+                {/* Chrome Extensions indicator */}
                 <div className="absolute bottom-1/3 left-8 w-10 h-10 bg-accent rounded-lg shadow-lg flex items-center justify-center transform -rotate-45 hover:rotate-0 transition-transform">
-                  <div className="w-2 h-2 bg-primary rounded-full"></div>
+                  <Chrome className="w-4 h-4 text-primary" />
                 </div>
               </div>
             </div>
