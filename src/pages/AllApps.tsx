@@ -10,32 +10,32 @@ const AllApps = () => {
     {
       icon: FileText,
       name: "Easy PDF Viewer",
-      description: "Convert, view, and manage PDF files directly in your browser. Edit text, merge documents, and extract pages with ease.",
+      description: "Bring simplicity to viewing and converting PDFs right from your browser! Effortless PDF management with seamless conversion and high-quality outputs.",
       rating: 4.8,
       downloads: "50,000+",
       color: "bg-brand-red",
       features: [
-        "PDF to Word conversion",
-        "Merge multiple PDFs",
-        "Extract specific pages",
-        "Add annotations and comments",
-        "Password protection"
+        "Effortless PDF viewing",
+        "Seamless conversion",
+        "Search-integrated results",
+        "High-quality outputs",
+        "Versatile format support"
       ],
       chromeStoreUrl: "https://chromewebstore.google.com/detail/easy-pdf-viewer/jgdddeonphekfhicmnpffkfpboalmcjd"
     },
     {
       icon: Shield,
       name: "Easy Login",
-      description: "Secure password manager with autofill capabilities. Generate strong passwords and keep your accounts safe with encrypted storage.",
+      description: "Simplify your online login experience and enhance security right from your browser! Instantly access verified, authentic login pages with advanced security checks.",
       rating: 4.9,
       downloads: "75,000+",
       color: "bg-brand-blue",
       features: [
-        "Password generation",
-        "Secure autofill",
-        "Encrypted storage",
-        "Two-factor authentication",
-        "Cross-device sync"
+        "Instant verified login access",
+        "Advanced security checks",
+        "Seamless integration",
+        "User-friendly interface",
+        "Protected browsing experience"
       ],
       chromeStoreUrl: "https://chromewebstore.google.com/detail/easy-login/cpmjnpalighpdecgankobogpcmbceaig"
     },

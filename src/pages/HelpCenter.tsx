@@ -165,8 +165,8 @@ const HelpCenter = () => {
         </div>
 
         {/* Contact Support Section */}
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
-          <Card>
+        <div className="flex justify-center mb-16">
+          <Card className="max-w-md w-full">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Mail className="w-6 h-6 text-primary" />
@@ -182,24 +182,6 @@ const HelpCenter = () => {
                   <Mail className="w-4 h-4" />
                   Contact Support
                 </a>
-              </Button>
-            </CardContent>
-          </Card>
-
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <MessageCircle className="w-6 h-6 text-green-500" />
-                Community Support
-              </CardTitle>
-              <CardDescription>
-                Connect with other users and get help from the community.
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <Button variant="outline" className="w-full">
-                <MessageCircle className="w-4 h-4 mr-2" />
-                Join Community
               </Button>
             </CardContent>
           </Card>
