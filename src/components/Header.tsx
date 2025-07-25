@@ -36,11 +36,10 @@ const Header = () => {
 
           {/* CTA Buttons */}
           <div className="flex items-center gap-3">
-            <Button variant="ghost" size="sm">
-              Login
-            </Button>
-            <Button variant="hero" size="sm">
-              Get Started Free
+            <Button variant="hero" size="sm" asChild>
+              <a href="/all-apps">
+                View All Extensions
+              </a>
             </Button>
           </div>
         </div>

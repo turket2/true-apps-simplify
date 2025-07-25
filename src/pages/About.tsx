@@ -29,8 +29,10 @@ const About = () => {
             <p className="text-muted-foreground mb-6">
               From simplifying PDF viewing to streamlining login processes, our extensions are designed with one goal in mind: making your digital experience effortless and efficient.
             </p>
-            <Button variant="hero" size="lg">
-              Explore Our Extensions
+            <Button variant="hero" size="lg" asChild>
+              <a href="/all-apps">
+                Explore Our Extensions
+              </a>
             </Button>
           </div>
           <div className="flex justify-center">
@@ -86,8 +88,10 @@ const About = () => {
             All our extensions are available through the official Chrome Web Store, ensuring security, 
             automatic updates, and seamless integration with your browser.
           </p>
-          <Button variant="hero" size="lg">
-            View Our Extensions
+          <Button variant="hero" size="lg" asChild>
+            <a href="/all-apps">
+              View Our Extensions
+            </a>
           </Button>
         </div>
       </main>

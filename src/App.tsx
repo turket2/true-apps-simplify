@@ -11,6 +11,8 @@ import InstallationGuide from "./pages/InstallationGuide";
 import BugReports from "./pages/BugReports";
 import FeatureRequests from "./pages/FeatureRequests";
 import HelpCenter from "./pages/HelpCenter";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -30,6 +32,8 @@ const App = () => (
           <Route path="/bug-reports" element={<BugReports />} />
           <Route path="/feature-requests" element={<FeatureRequests />} />
           <Route path="/help-center" element={<HelpCenter />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-of-service" element={<TermsOfService />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
